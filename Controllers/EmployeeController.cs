@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Threading.Tasks;
+using Asp.Versioning;
 using AutoMapper;
 using Demo1.Data;
 using Demo1.Models;
@@ -8,11 +9,12 @@ using Demo1.Services;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using Asp.Versioning;
 
 namespace Demo1.Controllers
 {
-    [Route("api/employee")]
+    [Route("api/v{veresion:apiVersion}/employee")]
+    [ApiController]
+    [ApiVersion("1.0")]
     public class EmployeeController : ControllerBase
     {
         // private readonly EmployeeDbContext _dbContext;
@@ -20,9 +22,9 @@ namespace Demo1.Controllers
         private readonly IMapper _mapper;
         public EmployeeController(
             // EmployeeDbContext dbContext,
-            IMapper mapper, IDemoRepository repository) 
+            IMapper mapper, IDemoRepository repository)
         {
-           // _dbContext = dbContext ?? throw new ArgumentNullException(nameof(dbContext));
+            // _dbContext = dbContext ?? throw new ArgumentNullException(nameof(dbContext));
             _mapper = mapper ?? throw new ArgumentNullException(nameof(mapper));
             _repository = repository ?? throw new ArgumentNullException(nameof(repository));
         }
