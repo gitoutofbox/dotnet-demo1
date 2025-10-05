@@ -12,7 +12,10 @@ using Asp.Versioning;
 
 namespace Demo1.Controllers
 {
-    [Route("api/employee")]
+    [Route("api/v{version:apiVersion}/employee")]
+    [ApiController]
+    [Asp.Versioning.ApiVersion("1.0")]
+    [ApiExplorerSettings(GroupName = "v1")]
     public class EmployeeController : ControllerBase
     {
         // private readonly EmployeeDbContext _dbContext;
@@ -20,9 +23,9 @@ namespace Demo1.Controllers
         private readonly IMapper _mapper;
         public EmployeeController(
             // EmployeeDbContext dbContext,
-            IMapper mapper, IDemoRepository repository) 
+            IMapper mapper, IDemoRepository repository)
         {
-           // _dbContext = dbContext ?? throw new ArgumentNullException(nameof(dbContext));
+            // _dbContext = dbContext ?? throw new ArgumentNullException(nameof(dbContext));
             _mapper = mapper ?? throw new ArgumentNullException(nameof(mapper));
             _repository = repository ?? throw new ArgumentNullException(nameof(repository));
         }
