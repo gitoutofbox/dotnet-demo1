@@ -167,5 +167,3 @@
 /Users/souravpaul/Development/DotNetProjects/Demo1/bin/Debug/net9.0/Asp.Versioning.Mvc.dll
 /Users/souravpaul/Development/DotNetProjects/Demo1/bin/Debug/net9.0/Asp.Versioning.Mvc.ApiExplorer.dll
 /Users/souravpaul/Development/DotNetProjects/Demo1/obj/Debug/net9.0/Demo1.sourcelink.json
-/Users/souravpaul/Development/DotNetProjects/Demo1/bin/Debug/net9.0/Microsoft.AspNetCore.Mvc.Versioning.dll
-/Users/souravpaul/Development/DotNetProjects/Demo1/bin/Debug/net9.0/Microsoft.AspNetCore.Mvc.Versioning.ApiExplorer.dll

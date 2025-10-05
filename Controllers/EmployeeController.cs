@@ -14,8 +14,8 @@ namespace Demo1.Controllers
 {
     [Route("api/v{version:apiVersion}/employee")]
     [ApiController]
-    [Asp.Versioning.ApiVersion("1.0")]
-    [ApiExplorerSettings(GroupName = "v1")]
+    [Asp.Versioning.ApiVersion("1.0")] // for api url v1 or v2
+    [ApiExplorerSettings(GroupName = "v1")] // for swagger to show in correct version page
     public class EmployeeController : ControllerBase
     {
         // private readonly EmployeeDbContext _dbContext;
@@ -31,6 +31,8 @@ namespace Demo1.Controllers
         }
 
         [HttpGet]
+        [Asp.Versioning.ApiVersion("1.0")] // for api url v1 or v2
+        [ApiExplorerSettings(GroupName = "v1")] // for swagger to show in correct version page
         public async Task<IActionResult> GetEmployee()
         {
             // var employeeList = _dbContext.Employees.ToList();
