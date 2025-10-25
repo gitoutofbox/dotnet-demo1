@@ -1,4 +1,5 @@
 using Asp.Versioning;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -8,6 +9,7 @@ namespace Demo1.Controllers
     [Route("api/v{veresion:apiVersion}/department")]
     [ApiController]
     [ApiVersion("1.0")]
+    [Authorize(Policy = "MustBeFromUSA")]
     public class DepartmentController : ControllerBase
     {
         [HttpGet]

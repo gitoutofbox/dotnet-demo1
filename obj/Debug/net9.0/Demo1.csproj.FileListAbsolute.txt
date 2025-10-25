@@ -167,3 +167,11 @@
 /Users/souravpaul/Development/DotNetProjects/Demo1/bin/Debug/net9.0/Asp.Versioning.Mvc.dll
 /Users/souravpaul/Development/DotNetProjects/Demo1/bin/Debug/net9.0/Asp.Versioning.Mvc.ApiExplorer.dll
 /Users/souravpaul/Development/DotNetProjects/Demo1/obj/Debug/net9.0/Demo1.sourcelink.json
+/Users/souravpaul/Development/DotNetProjects/Demo1/bin/Debug/net9.0/Microsoft.AspNetCore.Authentication.JwtBearer.dll
+/Users/souravpaul/Development/DotNetProjects/Demo1/bin/Debug/net9.0/Microsoft.IdentityModel.Abstractions.dll
+/Users/souravpaul/Development/DotNetProjects/Demo1/bin/Debug/net9.0/Microsoft.IdentityModel.JsonWebTokens.dll
+/Users/souravpaul/Development/DotNetProjects/Demo1/bin/Debug/net9.0/Microsoft.IdentityModel.Logging.dll
+/Users/souravpaul/Development/DotNetProjects/Demo1/bin/Debug/net9.0/Microsoft.IdentityModel.Protocols.dll
+/Users/souravpaul/Development/DotNetProjects/Demo1/bin/Debug/net9.0/Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+/Users/souravpaul/Development/DotNetProjects/Demo1/bin/Debug/net9.0/Microsoft.IdentityModel.Tokens.dll
+/Users/souravpaul/Development/DotNetProjects/Demo1/bin/Debug/net9.0/System.IdentityModel.Tokens.Jwt.dll

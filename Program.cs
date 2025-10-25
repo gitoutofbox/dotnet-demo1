@@ -2,6 +2,8 @@ using Asp.Versioning;
 using Demo1.Data;
 using Demo1.Services;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.IdentityModel.Tokens;
+using Microsoft.IdentityModel.Tokens.Experimental;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -36,6 +38,27 @@ builder.Services.AddApiVersioning(options =>
     // this will replace the version in the controller route
     options.GroupNameFormat = "'v'VVV";
     options.SubstituteApiVersionInUrl = true;
+});
+
+builder.Services.AddAuthentication("Bearer").AddJwtBearer(options =>
+{
+    options.TokenValidationParameters = new()
+    {
+        ValidateAudience = true,
+        ValidateIssuer = true,
+        ValidateIssuerSigningKey = true,
+        ValidIssuer = builder.Configuration["Authentication:Issuer"],
+        ValidAudience = builder.Configuration["Authentication:Audiences"],
+        IssuerSigningKey = new SymmetricSecurityKey(Convert.FromBase64String(builder.Configuration["Authentication:Secret"]))
+    };
+});
+
+builder.Services.AddAuthorization(options =>
+{
+    options.AddPolicy("MustBeFromUSA", policy =>
+    {
+        policy.RequireClaim("country", "USA");
+    });
 });
 
 builder.Services.AddSwaggerGen(options =>
